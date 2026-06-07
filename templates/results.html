@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <div class="result-card score-card">
+            <h2>ATS Match Score</h2>
+            <div class="score-circle">
+                {{ score }}%
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar" style="width: {{ score }}%;"></div>
+            </div>
+        </div>
+
+        <div class="result-card">
+            <h2>AI Analysis</h2>
+            <pre>{{ ai_feedback }}</pre>
+        </div>
+
+        <a href="/" class="back-btn">Analyze Another Resume</a>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="background-animation"></div>
+
+    <div class="hero">
+
+        <h1>AI Resume Analyzer</h1>
+
+        <p>
+            Upload your resume and compare it with any job description using
+            NLP, TF-IDF and AI-powered analysis.
+        </p>
+
+        <div class="badges">
+            <span>Flask</span>
+            <span>NLP</span>
+            <span>TF-IDF</span>
+            <span>Gemini AI</span>
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <form action="/analyze" method="post" enctype="multipart/form-data">
+
+            <label>Upload Resume (PDF)</label>
+
+            <input type="file" name="resume" required>
+
+            <label>Job Description</label>
+
+            <textarea name="job_description" rows="10" required></textarea>
+
+            <button type="submit">
+                Analyze Resume
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
