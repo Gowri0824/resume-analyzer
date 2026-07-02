@@ -26,7 +26,7 @@ def analyze():
 
     ai_feedback = analyze_resume(resume_text, jd_text)
     return render_template(
-    'result.html',
+    'results.html',
     score=round(score, 2),
     ai_feedback=ai_feedback
 )
